@@ -64,8 +64,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const onionButton = document.getElementById('onion');
   const answerText = document.getElementById('answer');
   const nextButton = document.getElementById('next');
+  const scoreText = document.getElementById('score');
 
   let isOnion;
+  let score = 0;
+  let total = 0;
 
   let getRandumNumber = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -96,22 +99,32 @@ document.addEventListener('DOMContentLoaded', () => {
     nextButton.classList.toggle('hide');
   }
 
+  let updateScore = (a,b) =>{
+    scoreText.textContent = `Your current score is ${a} / ${b}`;
+  }
+
   let onionButtonClick = () => {
+    total++;
     toggleHideButtons();
     if(isOnion){
       answerText.textContent = "Correct, this was an Onion Article";
+      score++;
     } else {
       answerText.textContent = "Wrong, this was a real Article";
     }
+    updateScore(score, total);
   }
 
   let realButtonClick = () => {
+    total++;
     toggleHideButtons();
     if(isOnion){
       answerText.textContent = "Wrong, this was an Onion Article";
     } else {
       answerText.textContent = "Correct, this was a real Article";
+      score++;
     }
+    updateScore(score, total);
   }
 
   let nextButtonClick = () => {
