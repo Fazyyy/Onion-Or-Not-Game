@@ -107,6 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   let nextButtonClick = () => {
+    answerText.textContent = "";
     getOnion();
   }
 
