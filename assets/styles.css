@@ -55,6 +55,7 @@ h2, p {
 button {
   padding: 15px 30px;
   transition: opacity 0.3s ease-in-out;
+  cursor: pointer;
 }
 
 .hide {
