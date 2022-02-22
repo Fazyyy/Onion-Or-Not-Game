@@ -75,9 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   let onionOrNot = () => {
-    let i = getRandumNumber(minValue, 2);
-    console.log(i);
-    return i;
+    return i = getRandumNumber(minValue, 2);
   }
 
   let getOnion = () => {
