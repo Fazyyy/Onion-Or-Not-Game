@@ -90,7 +90,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  let toggleHideButtons = () => {
+    onionButton.classList.toggle('hide');
+    realButton.classList.toggle('hide');
+    nextButton.classList.toggle('hide');
+  }
+
   let onionButtonClick = () => {
+    toggleHideButtons();
     if(isOnion){
       answerText.textContent = "Correct, this was an Onion Article";
     } else {
@@ -99,6 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   let realButtonClick = () => {
+    toggleHideButtons();
     if(isOnion){
       answerText.textContent = "Wrong, this was an Onion Article";
     } else {
@@ -107,6 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   let nextButtonClick = () => {
+    toggleHideButtons();
     answerText.textContent = "";
     getOnion();
   }
