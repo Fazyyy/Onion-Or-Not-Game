@@ -8,6 +8,6 @@ Onion or not is simply built with HTML, CSS and Javascript
 
 ## Try it
 
-[Onion Or Not](https://onionornotgame.netlify.app/assets/main.js)
+[Onion Or Not](https://onionornotgame.netlify.app)
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/1744e1a9-45f4-4873-99d2-ee62d5d49384/deploy-status)](https://app.netlify.com/sites/onionornotgame/deploys)
